@@ -21,7 +21,7 @@ After successful execution, the script produces report.txt at the specified dire
 Before running the script alter any global $variables according to your system/preferences. Each variable has a description of use found in the source code as a comment above it.
 ## Dependencies
 Get all the required packages to run the script at its full potential with  
-`sudo pacman -S rsync rmlint reflector`
+`sudo pacman -S rsync rmlint reflector pacman-contrib`
 ## Usage
 `cd ./alsm`  
 `chmod +x alsm`  
