@@ -26,7 +26,7 @@ bp_target="/home/$user/alsm-backup"
 
 # How many package versions to keep in pacman cache
 # Default: 3
-pc=3
+pc="3"
 
 # Where to redirect original output of commands
 # If you wish to run the script in a live shell and see progress use "/dev/stdout"
@@ -37,8 +37,8 @@ if [ -n "$user" ]
 then
 	printf "### ALSM Report created on $(date) ###\n\n" > $rp
 else
-	printf '[ERROR] Script variable $user is empty\n'
-	printf 'Please fill the variable $user with the username that you want the script to act on before running the script\n'
+	printf "[ERROR] Script variable $user is empty\n"
+	printf "Please fill the variable $user with the username that you want the script to act on before running the script\n"
 	exit 1
 fi
 
@@ -78,7 +78,7 @@ else
 fi
 
 # Update mirror list
-reflector --latest 100 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist >> $out && printf "[DONE] Succesfully updated and sorted the mirror list \n\n" >> $rp || printf "[ERROR] Couldn't update and sorted the mirror list \n\n" >> $rp
+reflector --latest 100 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist >> $out && printf "[DONE] Succesfully updated and sorted the mirror list \n\n" >> $rp || printf "[ERROR] Couldn't update/sort the mirror list \n\n" >> $rp
 
 # Clean the filesystem
 # Clear pacman cache
