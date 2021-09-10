@@ -91,14 +91,14 @@ paccache -ruk0 >> $out && printf "[DONE] Succesfully cleared cache of all uninst
 # System Upgrade
 # It is not recommended to uncomment the line below because upgrading your system will possibly require user intervention
 # and it is generally a serious task that shouldn't be automated. Only uncomment this line if you have read this https://wiki.archlinux.org/index.php/System_maintenance#Read_before_upgrading_the_system
-#yes | pacman -Syu && printf "[DONE] Succesfully upgraded system\n">> $rp || printf "[ERROR] Couldn't upgrade system\n">> $rp
+#yes | pacman -Syu && printf "[DONE] Succesfully upgraded system\n\n">> $rp || printf "[ERROR] Couldn't upgrade system\n\n">> $rp
 
 # Remove duplicates
 # These lines are commented to prevent the unwanted deletion of files
 # It is not recommended to uncomment the lines below without first doing a dry run of $ rmlint and inspecting what files will be removed
 #printf "rmlint $HOME:\n" >> $rp
 #rmlint $HOME | tail -n7 | head -n4 >> $rp
-#yes | bash rmlint.sh -d >> $out && printf "[DONE] Succesfully removed duplicate files with rmlint \n" >> $rp || printf "[ERROR] Couldn't remove duplicate files with rmlint \n" >> $rp
+#yes | bash rmlint.sh -d >> $out && printf "[DONE] Succesfully removed duplicate files with rmlint \n\n" >> $rp || printf "[ERROR] Couldn't remove duplicate files with rmlint \n\n" >> $rp
 #rm rmlint.*
 
 # Backup
